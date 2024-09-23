@@ -35,6 +35,16 @@ async def register_user_api(user_data: User):
         return result_message(result)
     return "Ошибка при заполнении почты"
 
+# @user_router.post("/register_user")
+# async def register_user_api(name: str, phone_number: str, email: str,
+#     password: str, birthday: str, user_city: str):
+#     user_db = dict(User)
+#     mail_validation = check_email(email)
+#     if mail_validation:
+#         result = register_user_db(**user_db)
+#         return result_message(result)
+#     return "Ошибка при заполнении почты"
+
 
 @user_router.post("/login_user")
 async def login_user_api(login: str, password: str):
